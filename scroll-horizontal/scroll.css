@@ -1,0 +1,38 @@
+.carousel{
+  width:90%;
+  margin:100px auto ;
+  border: 5px solid rgb(100, 81, 212);
+  display:flex;
+  overflow-x:auto ;
+
+
+}
+.carousel::-webkit-scrollbar{
+display: none;
+}
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  animation: spin  6s infinite linear;
+  gap:1em;
+  padding-right: 1em;
+
+
+}
+.card{
+  flex:0 0 5em;
+  height:5em;
+  padding:1em;
+  background: rgb(89, 10, 169);
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+ 
+}
+@keyframes spin{
+  from{ translate:0;}
+  to{ translate : -100%}
+}
