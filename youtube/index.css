@@ -5,26 +5,37 @@
   box-sizing: border-box;
   background-color: black;
 }
-head{
-  position:relative;
-  flex-direction: column;
+body{
+  display: grid;
+  grid-template-columns:80px 1fr;
+  grid-template-areas: 
+  "sidebar navbar"
+  "sidebar main"
+  "sidebar main"
+  ;
+}
+aside{
+  grid-area: sidebar;
+  color:white;
 }
 
 .heading{
-  font-size: 1.3rem;
+  grid-area: navbar;
   padding:0.5rem;
   display: flex;
   align-items: center;
+  gap:5rem;
   justify-content: space-around;
 
-  gap:20px;
   line-height: 3;
-
+}
+main{
+  grid-area: main;
+  color:white;
 }
 .youtube{
   cursor: pointer;
  
-  margin-left:-4rem;
   font-size: 1.4rem;
   font-weight: bold;
   color:white;
@@ -38,7 +49,8 @@ head{
 }
 .create{
   cursor: pointer;
-
+  font-size: medium;
+  
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -66,19 +78,18 @@ head{
 }
 .search input{
   cursor: pointer;
-
   color:rgb(254, 250, 250);
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border:none;
-  width:10rem;
+  width:20rem;
 
   border-radius: 20px;
   border: 0.1px solid rgb(49, 42, 42);
 
 
 }
-.voicebtn{
+.voicebtn{ 
   position: relative;
   display: flex;
   flex-direction: column;
@@ -96,6 +107,7 @@ head{
   padding:4px;
   border-radius: 10px;
   top:3rem;
+  font-size: small;
   background: grey;
   
 }
@@ -114,6 +126,10 @@ head{
   gap:20px;
 
 
+}
+.profile{
+  list-style-type: none;
+  color:white;
 }
 
 
